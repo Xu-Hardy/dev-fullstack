@@ -1,0 +1,47 @@
+{
+  "name": "Dev Fullstack Container",
+  "build": {
+    "dockerfile": "../Dockerfile",
+    "context": "..",
+    "args": {
+      "TARGETARCH": "amd64"
+    }
+  },
+  "remoteUser": "root",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        // 🐍 Python & 科学计算
+        "ms-python.python",
+
+        // 🐹 Go 开发
+        "golang.Go",
+
+        // ☕ Java 支持
+        "redhat.java",
+
+        // 🔧 C/C++ 支持
+        "ms-vscode.cpptools",
+
+        // ✨ 前端基础工具
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "formulahendry.auto-close-tag",
+        "formulahendry.auto-rename-tag",
+
+        // ⚡ Vue & Tailwind
+        "Vue.volar",
+        "bradlc.vscode-tailwindcss",
+
+        // 📄 Markdown + 本地预览
+        "ritwickdey.LiveServer",
+        "yzhang.markdown-all-in-one",
+        "shd101wyy.markdown-preview-enhanced"
+      ]
+    }
+  },
+  "forwardPorts": [22, 3389],
+  "features": {},
+  "postCreateCommand": "echo '✅ Dev container is ready!'"
+}

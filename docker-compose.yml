@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  dev-fullstack:
+    image: cloudsmithy/dev-fullstack:latest
+    container_name: dev-fullstack
+    ports:
+      - "2222:22"      # SSH
+      - "3389:3389"    # RDP 图形桌面
+      - "8888:8888"    # JupyterLab
+    volumes:
+      - ./workspace:/workspace   # 挂载当前目录作为工作区
+    restart: unless-stopped
+    privileged: true
